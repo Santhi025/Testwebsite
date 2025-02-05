@@ -1,0 +1,845 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazon</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<style>
+    * {
+        margin: 0;
+        
+
+    }
+    body{
+        overflow-x: auto;
+        overflow-y: auto;
+    }
+    .navbar{
+        height: 60px;
+        background-color: #0F1111;
+        color: white;
+        display: flex;
+       align-items: center;
+       justify-content: space-evenly;
+       box-sizing: border-box;
+      
+    }
+    /* LOGO*/
+    .nav_logo{
+        height: 55px;
+        width: 100px;
+        margin-right: 3px;
+        box-sizing: border-box;
+       
+    }
+   .logo{
+    background-image: url(th.jpeg);
+    background-size: cover;
+    
+    height: 50px;
+    width: 100px;
+    
+   }
+   /*BORDER*/
+   .border{
+    border: 2px solid transparent;
+   }
+   .border:hover{
+    border: 2px solid white;
+    border-radius: 2px;
+   }
+   /*ADDRESS*/
+   .nav_address{
+    
+    height: 55px;
+    width: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    box-sizing: border-box;
+    padding-top: 10px;
+   
+   }
+   .add_sec{
+    color: #ffffff; 
+    font-size: 1 rem;
+    margin-left: 5px;
+   }
+   .add_fir{
+    color:#CCCCCC; 
+    font-size: 0.85rem;
+    margin-left: 16px;
+   }
+   .add_icon{
+    display: flex;
+    align-items: centre;
+   }
+   /*SEARCH*/
+   .nav_search{
+    display: flex;
+   
+    width:60%;
+    height: 40px;
+    border-radius: 5px;
+    justify-content: space-evenly;
+    
+    
+   }
+   .nav_search:hover{
+    border: 3px solid #febd68;
+    border-radius: 8px;
+   }
+   .search{
+       background-color: #f3f3f3;
+       width: 50px;
+       height: 40px;
+       text-align: center;
+       border-top-left-radius: 5px;
+       border-bottom-left-radius: 5px;
+       border-top-right-radius: 0;
+       border-bottom-right-radius: 0;
+       border: none;
+   }
+   .input{
+    width: 100%;
+    font-size: 1rem;
+    border: none;
+   }
+.glass{
+    width: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    background-color: #febd68;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    color: #0F1111;
+}
+/*SIGN IN*/
+.sign-in{
+    box-sizing: border-box;
+    padding-top: 3px;
+    height: 55px;
+}
+span{
+    font-size: 0.7rem;
+}
+.sign2{
+    font-size: 0.85rem;
+    font-weight: 700;
+}
+/*CART*/
+.cart i{
+    font-size: 30px;
+    text-align: center;
+}
+.cart{
+    font-size: 25px;
+    height: 55px;
+    box-sizing: border-box;
+    padding-top: 20px;
+    text-align: center;
+    display: flex;
+    text-align: center;
+    display: flex;
+    align-items: end;
+}
+.pannel{
+    height: 40px;
+    background-color: #222f22;
+    color: white;
+    display: flex;
+    align-items:center;
+    justify-content: space-evenly;
+}
+.pan-opt p{ 
+    display:inline;
+    margin-left: 10px;
+
+}
+.pan-opt{
+    width: 70%;
+    font-size: 0.85rem;
+}
+.pan-deals{
+    font-size: 0.9rem;
+    font-weight: 700;
+   
+}
+.hero{
+    background-image: url("background photo.jpg");
+    height: 350px;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+   align-items: end;
+  
+    
+}
+.hero-msg{
+    background-color: white;
+    color: black;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.85rem;
+    margin-bottom: 40px;
+    width: 90%;
+}
+.hero-msg a{
+    color: #007185;
+}
+.shopping{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    background-color: #e2e7e6;
+}
+.box{
+    
+    height: 100%;
+    width: 23%;
+    background-color: white;
+    padding: 20px 0px 15px;
+    margin-top: 18px;
+  
+
+}
+.img1{
+   
+    
+    height:350px;
+   background-size: cover;
+   margin-top: 1rem;
+   margin-bottom: 1rem;
+   
+   
+
+}
+.content{
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+.content p{
+    
+    margin-bottom: 1rem;
+    color: #007185;
+}
+.shp2{
+    height: 250px;
+    width: 96.9%;
+    background-color:white;
+    margin-top:1rem;
+    margin-bottom: 0.5rem;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+
+}
+
+.b{
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+    height: 200px;
+    width: 15%;
+    
+}
+.img{
+    height: 80%;
+    width:100%;
+    position: relative;
+    top: 2rem;
+    border: none;
+}
+.pannel{
+    background-color: #37475a;
+    color: white;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.85rem;
+    flex-grow: 1;
+}
+.pan-opt{
+    display: flex;
+   align-items: center;
+    flex-grow: 1;
+    height: 30px;
+    
+}
+.pan-opt div:nth-of-type(6){
+    flex: 3;
+}
+
+.pannel:hover{
+    opacity: 0.95;
+    cursor: pointer;
+}
+.pannel2{
+    background-color: #222f3d;
+    color: white;
+    height: 300px;
+    display: flex;
+    justify-content: space-evenly;
+}
+ul{
+    margin-top: 20px;
+}
+
+ ul p{
+    font-size: 1.2rem;
+    color: #ffffff;
+ } 
+ ul a{
+    display: block;
+    font-size: 0.85rem;
+    margin-top: 10px;
+    color: #dddddd;
+ }  
+ .pannel3{
+    background-color: #222f3d;
+    height: 100px;
+    border-top: 0.0005rem solid #c0bdbd86;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+ }
+ .sel{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+   
+ }
+ select{
+    background-color: #222f3d;
+    border-radius: 3px;
+    height:2.1rem ;
+    width: 9rem;
+    color: #dddddd;
+ }
+ .sel div{
+    border: 0.05rem solid #c2c0c093;
+    border-radius: 3px;
+    height: 2.2rem; 
+    width: 10rem;
+    margin-left: 9px;
+    color: #dddddd;
+    text-align: center;
+    box-sizing: border-box;
+    padding-top: 5px;
+ }
+ .sel:hover{
+    cursor: pointer;
+ }
+ select:hover{
+    cursor: pointer;
+ }
+ .under{
+    margin-left: 8px;
+    box-sizing: border-box;
+    text-align: center;
+    padding: 3px;
+    border-radius: 2px;
+    height: 30px;
+    margin-top: 7px;
+    font-size: 1rem;
+    color: white;
+   
+ }
+ 
+ .under:hover{
+   border: 1px solid #e2e7e6;
+}
+ .pan-deals{
+    display: flex;
+    justify-content: flex-end;
+ }
+ .pan-deals:hover{
+    border: none;
+ }
+</style>
+</head>
+<body>
+    <header>
+       <div class="navbar">
+       
+        <div class="nav_logo ">
+            <div class="logo border">
+
+            </div>
+        
+    </div> 
+        <div class="nav_address border ">
+            <p class="add_fir">Deliver to
+            </p>
+            <div class="add_icon">
+                <i class="fa-solid fa-location-dot"></i>
+                <p class="add_sec">India</p>
+            </div>
+            </div>
+            <div class="nav_search">
+                <select class="search">
+                   <option>All</option>
+                   
+                </select>
+                <input placeholder="Search Amazon.in" class="input">
+                <div class="glass">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+            </div>
+        <div class="sign-in border">
+            <p><span>Hello, sign in</span></p>
+            <p class="sign2">Account & Lists</p>
+        </div>
+        <div class="sign-in border">
+            <p><span>Returns</span></p>
+            <p class="sign2">& Orders</p>
+        </div>
+        <div class="cart border">
+            <i class="fa-solid fa-cart-shopping"></i>
+           <p style="font-size: 19px;padding-bottom: 2px;"><b>Cart</b></p>
+        </div>
+
+        </div>  
+        
+        
+        <div class="pannel">
+            <div class=" border pann-all under">
+                <i class="fa-solid fa-bars"></i>
+                <span >All</span>
+            </div>
+                 <div class="pan-opt">
+                    <div class="border under" >Today's Deals</div>
+                    <div class="border under">Customer Services</div>
+                    <div class="border under">Registry</div>
+                    <div class="border under">Gift Cards</div>
+                    <div class="border under">Sell</div>
+                 
+                 <div class="pan-deals border under" style="width: 350px; ">
+                    Shop deals in Electronics
+                 </div>
+                </div>
+        </div>
+   </header>
+
+   <div class="hero">
+<div class="hero-msg">
+    <p>You are on amazon.com. You can also shop an amazon India for millions of products with fast delivery. <a>Click here to go amazon.in</a></p>
+</div>
+   </div>
+   <!-- SHOPPING , FIRST-->
+   <div class="shopping">
+
+    <div class="box1 box">
+        <div class="content">
+        <h2>Gaming accessories</h2>
+        <div class="img1">
+            <a href="#"><img src="first.jpg" style="height: 80%; width: 100%;"></a>
+        </div>
+        <p>See more</p>
+    </div>
+    </div>
+    <div class="box2 box">
+        <div class="content">
+            <h2>Gaming accessories</h2>
+            <div class="img1">
+                <a href="#"><img src="second.jpg" style="height: 80%; width: 100%;"></a>
+            </div>
+            <p>See more</p>
+        </div>
+    </div>
+    <div class="box3 box">
+        <div class="content">
+            <h2>Gaming accessories</h2>
+            <div class="img1" >
+                <a href="#"> <img src="third.webp" style="height: 80%; width: 100%;"></a>
+            </div>
+            <p>See more</p>
+        </div>
+    </div>
+    <div class="box4 box">
+        <div class="content">
+            <h2>Gaming accessories</h2>
+            <div class="img1" >
+                <a href="#"><img src="four.jpg" style="height: 80%; width: 100%;"></a>
+            </div>
+            <p>See more</p>
+        </div>
+    </div>
+    
+    <div class="box5 box">
+        <div class="content">
+        <h2>Gaming accessories</h2>
+    <div class="img1" >
+        <a href="#"><img src="five.webp" style="height: 80%; width: 100%;"></a>
+        </div>
+        <p>See more</p>
+    </div>
+    </div>
+    <div class="box6 box">
+        <div class="content">
+            <h2>Gaming accessories</h2>
+            <div class="img1" >
+                <a href="#"> <img src="six.jpg" style="height: 80%; width: 100%;"></a>
+            </div>
+            <p>See more</p>
+        </div>
+    </div>
+    <div class="box7 box">
+        <div class="content">
+            <h2>Gaming accessories</h2>
+            <div class="img1">
+                <a href="#"><img src="seve.jpg" style="height: 80%; width: 100%;"></a>
+            </div>
+            <p>See more</p>
+        </div>
+    </div>
+    <div class="box8 box">
+        <div class="content">
+            <h2>Gaming accessories</h2>
+            <div class="img1">
+                <a href="#"><img src="eight.jpg" style="height: 80%; width: 100%;"></a>
+            </div>
+            <p>See more</p>
+        </div>
+    </div>
+   
+   <!--SHOPPING SECOND-->
+   <div class="shp2">
+    <div class="b"><a href="#"><img src="r1.jpg" class="img"></a></div>
+    <div class="b"><a href="#"><img src="r2.jpg" class="img"></a></div>
+    <div class="b "><a href="#"><img src="r3.jpg" class="img"></a></div>
+    <div class="b"><a href="#"><img src="r4.jpg" class="img"></a></div>
+    <div class="b"><a href="#"><img src="r5.jpg" class="img"></a></div>
+    <div class="b"><a href="#"><img src="r6.jpg" class="img"></a></div>
+   </div>
+
+   <div class="shp2">
+    <div class="b"><a href="#"><img src="r1.jpg" class="img"></a></div>
+    <div class="b"><a href="#"><img src="r2.jpg" class="img"></a></div>
+    <div class="b "><a href="#"><img src="r3.jpg" class="img"></a></div>
+    <div class="b"><a href="#"><img src="r4.jpg" class="img"></a></div>
+    <div class="b"><a href="#"><img src="r5.jpg" class="img"></a></div>
+    <div class="b"><a href="#"><img src="r6.jpg" class="img"></a></div>
+   </div>
+
+
+   <!--SHOPPING - THIRD-->
+
+
+   <div class="box1 box">
+    <div class="content">
+    <h2>Gaming accessories</h2>
+    <div class="img1">
+        <a href="#"><img src="b1.jpg" style="height: 80%; width: 100%;"></a>
+    </div>
+    <p>See more</p>
+</div>
+</div>
+<div class="box2 box">
+    <div class="content">
+        <h2>Gaming accessories</h2>
+        <div class="img1">
+            <a href="#"><img src="b2.jpg" style="height: 80%; width: 100%;"></a>
+        </div>
+        <p>See more</p>
+    </div>
+</div>
+<div class="box3 box">
+    <div class="content">
+        <h2>Gaming accessories</h2>
+        <div class="img1" >
+            <a href="#"> <img src="b3.jpg" style="height: 80%; width: 100%;"></a>
+        </div>
+        <p>See more</p>
+    </div>
+</div>
+<div class="box4 box">
+    <div class="content">
+        <h2>Gaming accessories</h2>
+        <div class="img1" >
+            <a href="#"><img src="b4.jpg" style="height: 80%; width: 100%;"></a>
+        </div>
+        <p>See more</p>
+    </div>
+</div>
+
+<div class="box5 box">
+    <div class="content">
+    <h2>Gaming accessories</h2>
+<div class="img1" >
+    <a href="#"><img src="b5.jpg" style="height: 80%; width: 100%;"></a>
+    </div>
+    <p>See more</p>
+</div>
+</div>
+<div class="box6 box">
+    <div class="content">
+        <h2>Gaming accessories</h2>
+        <div class="img1" >
+            <a href="#"> <img src="b6.jpg" style="height: 80%; width: 100%;"></a>
+        </div>
+        <p>See more</p>
+    </div>
+</div>
+<div class="box7 box">
+    <div class="content">
+        <h2>Gaming accessories</h2>
+        <div class="img1">
+            <a href="#"><img src="seve.jpg" style="height: 80%; width: 100%;"></a>
+        </div>
+        <p>See more</p>
+    </div>
+</div>
+<div class="box8 box">
+    <div class="content">
+        <h2>Gaming accessories</h2>
+        <div class="img1">
+            <a href="#"><img src="eight.jpg" style="height: 80%; width: 100%;"></a>
+        </div>
+        <p>See more</p>
+    </div>
+</div>
+
+<div class="shp2">
+    <div class="b"><a href="#"><img src="ex1.jpg" class="img"></a></div>
+    <div class="b"><a href="#"><img src="ex2.jpg" class="img"></a></div>
+    <div class="b "><a href="#"><img src="ex3.jpg" class="img"></a></div>
+    <div class="b"><a href="#"><img src="ex4.jpg" class="img"></a></div>
+    <div class="b"><a href="#"><img src="ex5.jpg" class="img"></a></div>
+    <div class="b"><a href="#"><img src="ex6.jpg" class="img"></a></div>
+   </div>
+   <div class="shp2">
+    <div class="b"><a href="#"><img src="r1.jpg" class="img"></a></div>
+    <div class="b"><a href="#"><img src="r2.jpg" class="img"></a></div>
+    <div class="b "><a href="#"><img src="r3.jpg" class="img"></a></div>
+    <div class="b"><a href="#"><img src="r4.jpg" class="img"></a></div>
+    <div class="b"><a href="#"><img src="r5.jpg" class="img"></a></div>
+    <div class="b"><a href="#"><img src="r6.jpg" class="img"></a></div>
+   </div>
+
+
+
+   <div class="box1 box">
+    <div class="content">
+    <h2>Gaming accessories</h2>
+    <div class="img1">
+        <a href="#"><img src="first.jpg" style="height: 80%; width: 100%;"></a>
+    </div>
+    <p>See more</p>
+</div>
+</div>
+<div class="box2 box">
+    <div class="content">
+        <h2>Gaming accessories</h2>
+        <div class="img1">
+            <a href="#"><img src="second.jpg" style="height: 80%; width: 100%;"></a>
+        </div>
+        <p>See more</p>
+    </div>
+</div>
+<div class="box3 box">
+    <div class="content">
+        <h2>Gaming accessories</h2>
+        <div class="img1" >
+            <a href="#"> <img src="third.webp" style="height: 80%; width: 100%;"></a>
+        </div>
+        <p>See more</p>
+    </div>
+</div>
+<div class="box4 box">
+    <div class="content">
+        <h2>Gaming accessories</h2>
+        <div class="img1" >
+            <a href="#"><img src="four.jpg" style="height: 80%; width: 100%;"></a>
+        </div>
+        <p>See more</p>
+    </div>
+</div>
+
+<div class="box5 box">
+    <div class="content">
+    <h2>Gaming accessories</h2>
+<div class="img1" >
+    <a href="#"><img src="five.webp" style="height: 80%; width: 100%;"></a>
+    </div>
+    <p>See more</p>
+</div>
+</div>
+<div class="box6 box">
+    <div class="content">
+        <h2>Gaming accessories</h2>
+        <div class="img1" >
+            <a href="#"> <img src="six.jpg" style="height: 80%; width: 100%;"></a>
+        </div>
+        <p>See more</p>
+    </div>
+</div>
+<div class="box7 box">
+    <div class="content">
+        <h2>Gaming accessories</h2>
+        <div class="img1">
+            <a href="#"><img src="seve.jpg" style="height: 80%; width: 100%;"></a>
+        </div>
+        <p>See more</p>
+    </div>
+</div>
+<div class="box8 box">
+    <div class="content">
+        <h2>Gaming accessories</h2>
+        <div class="img1">
+            <a href="#"><img src="eight.jpg" style="height: 80%; width: 100%;"></a>
+        </div>
+        <p>See more</p>
+    </div>
+</div>
+
+<div class="box1 box">
+    <div class="content">
+    <h2>Gaming accessories</h2>
+    <div class="img1">
+        <a href="#"><img src="first.jpg" style="height: 80%; width: 100%;"></a>
+    </div>
+    <p>See more</p>
+</div>
+</div>
+<div class="box2 box">
+    <div class="content">
+        <h2>Gaming accessories</h2>
+        <div class="img1">
+            <a href="#"><img src="second.jpg" style="height: 80%; width: 100%;"></a>
+        </div>
+        <p>See more</p>
+    </div>
+</div>
+<div class="box3 box">
+    <div class="content">
+        <h2>Gaming accessories</h2>
+        <div class="img1" >
+            <a href="#"> <img src="third.webp" style="height: 80%; width: 100%;"></a>
+        </div>
+        <p>See more</p>
+    </div>
+</div>
+<div class="box4 box">
+    <div class="content">
+        <h2>Gaming accessories</h2>
+        <div class="img1" >
+            <a href="#"><img src="four.jpg" style="height: 80%; width: 100%;"></a>
+        </div>
+        <p>See more</p>
+    </div>
+</div>
+
+<div class="box5 box">
+    <div class="content">
+    <h2>Gaming accessories</h2>
+<div class="img1" >
+    <a href="#"><img src="five.webp" style="height: 80%; width: 100%;"></a>
+    </div>
+    <p>See more</p>
+</div>
+</div>
+<div class="box6 box">
+    <div class="content">
+        <h2>Gaming accessories</h2>
+        <div class="img1" >
+            <a href="#"> <img src="six.jpg" style="height: 80%; width: 100%;"></a>
+        </div>
+        <p>See more</p>
+    </div>
+</div>
+<div class="box7 box">
+    <div class="content">
+        <h2>Gaming accessories</h2>
+        <div class="img1">
+            <a href="#"><img src="seve.jpg" style="height: 80%; width: 100%;"></a>
+        </div>
+        <p>See more</p>
+    </div>
+</div>
+<div class="box8 box">
+    <div class="content">
+        <h2>Gaming accessories</h2>
+        <div class="img1">
+            <a href="#"><img src="eight.jpg" style="height: 80%; width: 100%;"></a>
+        </div>
+        <p>See more</p>
+    </div>
+</div>
+
+<div class="shp2" style="margin-bottom: 2rem;">
+    <div class="b"><a href="#"><img src="r1.jpg" class="img"></a></div>
+    <div class="b"><a href="#"><img src="r2.jpg" class="img"></a></div>
+    <div class="b "><a href="#"><img src="r3.jpg" class="img"></a></div>
+    <div class="b"><a href="#"><img src="r4.jpg" class="img"></a></div>
+    <div class="b"><a href="#"><img src="r5.jpg" class="img"></a></div>
+    <div class="b"><a href="#"><img src="r6.jpg" class="img"></a></div>
+   </div>
+</div>
+<footer>
+    <div class="pannel">
+Back to top
+    </div>
+    <div class="pannel2">
+        <ul>
+            <p>Get to Know Us</p>
+            <a>Careers</a>
+            <a>Blog</a>
+            <a>About Amazon</a>
+            <a>Investor Relations</a>
+            <a>Amazon Devices</a>
+            <a>Amaon Science</a>
+        </ul>
+        <ul>
+            <p>Get to Know Us</p>
+            <a>Careers</a>
+            <a>Blog</a>
+            <a>About Amazon</a>
+            <a>Investor Relations</a>
+            <a>Amazon Devices</a>
+            <a>Amaon Science</a>
+        </ul>
+        <ul>
+            <p>Get to Know Us</p>
+            <a>Careers</a>
+            <a>Blog</a>
+            <a>About Amazon</a>
+            <a>Investor Relations</a>
+            <a>Amazon Devices</a>
+            <a>Amaon Science</a>
+        </ul>
+        <ul>
+            <p>Get to Know Us</p>
+            <a>Careers</a>
+            <a>Blog</a>
+            <a>About Amazon</a>
+            <a>Investor Relations</a>
+            <a>Amazon Devices</a>
+            <a>Amaon Science</a>
+        </ul>
+    </div>
+
+    <div class="pannel3">
+        <div class="footlogo">
+<img src="logo2.jpeg" style="width: 6rem;height: 4rem; background-color: #007185;">
+        </div>
+        <div class="sel">
+        <select style="height: 2.2rem; width: 8rem;">
+            <option>India</option>
+            <option>USA</option>
+            <option>Canada</option>
+        </select>
+        <div >$ USD-US Dollar</div>
+        <div >United States</div>
+    </div>
+</div>
+</footer>
+
+</body>
+</html>
